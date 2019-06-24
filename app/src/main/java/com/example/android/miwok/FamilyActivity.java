@@ -14,7 +14,7 @@ public class FamilyActivity extends AppCompatActivity {
         setContentView(R.layout.word_list);
 
         //Array de numeros en String
-        ArrayList<Word> words = new ArrayList<Word>();
+        ArrayList<Word> words = new ArrayList<>();
         //Agregando datos
         words.add(new Word("father", "әpә"));
         words.add(new Word("mother", "әṭa"));
@@ -29,7 +29,7 @@ public class FamilyActivity extends AppCompatActivity {
 
         WordAdapter adapter = new WordAdapter(this, words);
 
-        ListView listView = (ListView) findViewById(R.id.list);
+        ListView listView = findViewById(R.id.list);
 
         listView.setAdapter(adapter);
     }

@@ -8,10 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
-import java.util.List;
 
 /* Special adapter to view the array list of words than a simple arrayAdapter cant manage */
 public class WordAdapter extends ArrayAdapter<Word> {
@@ -30,10 +27,10 @@ public class WordAdapter extends ArrayAdapter<Word> {
         //get the link object located at this position in the list
         Word currentWord = getItem(position);
 
-        TextView miwokTextView = (TextView) listItemView.findViewById(R.id.miwok_text_view);
+        TextView miwokTextView = listItemView.findViewById(R.id.miwok_text_view);
         miwokTextView.setText(currentWord.getMiworkTranslation());
 
-        TextView defaultTextView = (TextView) listItemView.findViewById(R.id.miwok_default_text_view);
+        TextView defaultTextView = listItemView.findViewById(R.id.miwok_default_text_view);
         defaultTextView.setText(currentWord.getDefaultTranslation());
 
         //return the whole list item layout(containing 2 TextViews and ImageView)
